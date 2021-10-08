@@ -9,7 +9,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 require('dotenv/config');
 
-
+console.log(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_COLL}`)
 mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_COLL}`,
    { useNewUrlParser: true,  useUnifiedTopology: true, useCreateIndex:true }
   )
